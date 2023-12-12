@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+
+void GetSet( int data[], int *num ) {
+*num = data[0];
+}
+
+int main() {
+int *data[20], num;
+num = 20;
+GetSet( &data, &num );
+printf( "%d\n", num ); //พิมพ์ค่าตัวเเปร num
+return 0;
+}
