@@ -1,0 +1,32 @@
+#include <stdio.h>
+int *GetSet( int *num ) {
+
+  // รับจำนวนสมาชิกของเซต
+  printf("รับจำนวนของเซต: ");
+  scanf("%d", num);
+  // กำหนดขนาดของอาร์เรย์
+  int size = *num;
+  // ประกาศอาร์เรย์ของค่าสมาชิกเซต
+  int *set = (int *)malloc(size * sizeof(int)); //4x10
+  // รับค่าของแต่ละสมาชิกในเซต
+  for (int i = 0; i < size; i++) {
+    printf("สมาชิกในเซต[%d]: ", i);
+    scanf("%d", &set[i]);
+  }
+  // คืนค่าอาร์เรย์ของค่าสมาชิกเซต
+  return set;
+}
+
+int main() {
+  // ประกาศตัวแปร
+  int *data, num;
+  // เรียกใช้ฟังก์ชัน `GetSet()`
+  data = GetSet( &num );
+  // แสดงค่าของแต่ละสมาชิกในเซต
+  for (int i = 0; i < num; i++) {
+    printf("%d ", data[i]);
+  }
+  printf("\n");
+  // คืนค่า
+  return 0;
+}
