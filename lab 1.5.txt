@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+void GetMatrix( int v[], int *row, int *col ) {
+ int i, j;
+
+ // get value row, colrum
+ printf( "Enter  number  rows: " );
+ scanf( "%d", row ) ;
+ printf( "Enter  number  columns: " ) ;
+ scanf( "%d", col ) ;
+ // end get value row, colrum
+
+ // get value member set
+ for ( i = 0; i < *row; i++ ) {
+   for ( j = 0; j < *col; j++ ) {
+     printf( "Enter number row %d, column %d: ", i + 1, j + 1 ) ;
+     scanf( "%d", &v[i * *col + j] ) ;
+   }
+ } // end get value member set
+}
+
+int main() {
+ int data[50], m, n ;  // กำหนดอาร์เรย์ให้รองรับได้ 50 ตัว
+ GetMatrix(data, &m, &n);
+ 
+ // แสดงผลค่าสมาชิกในMatrix
+ printf( "\n" ) ; 
+ for ( int i = 0; i < m; i++ ) {
+   for ( int j = 0; j < n; j++ ) {
+     printf( "%d\t ", data[i * n + j] );
+   }
+   printf( "\n" ) ;  
+ }
+
+ return 0;
+}//end funtion
