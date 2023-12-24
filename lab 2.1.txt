@@ -13,8 +13,8 @@ void reverse( char str1[], char str2[] ) {
 }
 
 int main() {
-  char text[40] = "I Love You" ;
-  char out [40] ;
+  char text[50] = "I Love You" ;
+  char out [50] ;
 
   // เรียกใช้ฟังก์ชัน reverse()
   reverse( text, out ) ;
